@@ -4,27 +4,27 @@ The Hub receives a test to be executed along with information on which browser a
 
 ## Dockerfile
 
-[`vaadin-testbench/hub` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/Hub/Dockerfile)
+[`urosporo/testbench-hub` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/Hub/Dockerfile)
 
 ## How to use this image
 
 ```
-$ docker run -d -p 4444:4444 --name testbench-hub vaadin-testbench/hub
+$ docker run -d -p 4444:4444 --name testbench-hub urosporo/testbench-hub
 ```
 
 Note: You can optionally override default configuration settings using environment variables.
 See the [Hub's Dockerfile](Dockerfile) to view the list of variables and their default values.
 
 ```
-$ docker run -d -p 4444:4444 --name testbench-hub -e GRID_TIMEOUT=10 vaadin-testbench/hub
+$ docker run -d -p 4444:4444 --name testbench-hub -e GRID_TIMEOUT=10 urosporo/testbench-hub
 ```
 
 
 Once the hub is up and running will want to launch nodes that can run tests. You can run as many nodes as you wish.
 
 ```
-$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm vaadin-testbench/node-chrome
-$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm vaadin-testbench/node-firefox
+$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm urosporo/testbench-node-chrome
+$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm urosporo/testbench-node-firefox
 ```
 
 ## What is Vaadin Testbench?

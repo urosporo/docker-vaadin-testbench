@@ -4,13 +4,13 @@ Vaadin Testbench Standalone Server with Chrome
 
 ## Dockerfile
 
-[`vaadin-testbench/standalone-chrome` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/StandaloneChrome/Dockerfile)
+[`urosporo/testbench-standalone-chrome` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/StandaloneChrome/Dockerfile)
 
 ## How to use this image
 
 
 ```
-$ docker run -d -p 4444:4444 -v /dev/shm:/dev/shm vaadin-testbench/standalone-chrome
+$ docker run -d -p 4444:4444 -v /dev/shm:/dev/shm urosporo/testbench-standalone-chrome
 ```
 
 ## What is Vaadin Testbench?

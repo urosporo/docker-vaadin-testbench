@@ -4,20 +4,20 @@ _This image is only intended for development purposes!_ Runs a Vaadin Testbench 
 
 ## Dockerfile
 
-[`vaadin-testbench/node-firefox-debug` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/NodeFirefoxDebug/Dockerfile)
+[`urosporo/testbench-node-firefox-debug` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/NodeFirefoxDebug/Dockerfile)
 
 ## How to use this image
 
 First, you will need a Vaadin Testbench Grid Hub that the Node will connect to.
 
 ```
-$ docker run -d -p 4444:4444 --name testbench-hub vaadin-testbench/hub
+$ docker run -d -p 4444:4444 --name testbench-hub urosporo/testbench-hub
 ```
 
 Once the hub is up and running will want to launch nodes that can run tests.
 
 ```
-$ docker run -d -p 5900:5900 --link testbench-hub:hub -v /dev/shm:/dev/shm vaadin-testbench/node-firefox-debug
+$ docker run -d -p 5900:5900 --link testbench-hub:hub -v /dev/shm:/dev/shm urosporo/testbench-node-firefox-debug
 ```
 
 You can acquire the port that the VNC server is exposed to by running:
@@ -37,7 +37,7 @@ If you are running Boot2Docker on Mac then you already have a [VNC client](http:
 When you are prompted for the password it is __secret__. If you wish to change this then you should either change it in the `/NodeBase/Dockerfile` and build the images yourself, or you can define a docker image that derives from the posted ones which reconfigures it:
 
 ``` dockerfile
-FROM vaadin-testbench/node-firefox-debug:5.1.2
+FROM urosporo/testbench-node-firefox-debug:5.1.2
 
 RUN x11vnc -storepasswd <your-password-here> /home/seluser/.vnc/passwd
 ```

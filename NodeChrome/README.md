@@ -4,20 +4,20 @@ Vaadin Testbench Node configured to run Google Chrome.
 
 ## Dockerfile
 
-[`vaadin-testbench/node-chrome` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/NodeChrome/Dockerfile)
+[`urosporo/testbench-node-chrome` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/NodeChrome/Dockerfile)
 
 ## How to use this image
 
 First, you will need a Vaadin Testbench Grid Hub that the Node will connect to.
 
 ```
-$ docker run -d -p 4444:4444 --name testbench-hub vaadin-testbench/hub
+$ docker run -d -p 4444:4444 --name testbench-hub urosporo/testbench-hub
 ```
 
 Once the hub is up and running will want to launch nodes that can run tests. You can run as many nodes as you wish.
 
 ```
-$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm vaadin-testbench/node-chrome
+$ docker run -d --link testbench-hub:hub -v /dev/shm:/dev/shm urosporo/testbench-node-chrome
 ```
 
 ## What is Vaadin Testbench?

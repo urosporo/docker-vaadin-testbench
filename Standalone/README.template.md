@@ -4,13 +4,13 @@ Vaadin Testbench Standalone Server with ##BROWSER##
 
 ## Dockerfile
 
-[`vaadin-testbench/standalone-##BROWSER_LC##` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/##FOLDER##/Dockerfile)
+[`urosporo/testbench-standalone-##BROWSER_LC##` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/##FOLDER##/Dockerfile)
 
 ## How to use this image
 
 
 ```
-$ docker run -d -p 4444:4444 -v /dev/shm:/dev/shm vaadin-testbench/standalone-##BROWSER_LC##
+$ docker run -d -p 4444:4444 -v /dev/shm:/dev/shm urosporo/testbench-standalone-##BROWSER_LC##
 ```
 
 ## What is Vaadin Testbench?

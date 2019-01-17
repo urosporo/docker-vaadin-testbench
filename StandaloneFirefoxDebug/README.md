@@ -5,13 +5,13 @@ _This image is only intended for development purposes!_ Runs a Vaadin Testbench 
 
 ## Dockerfile
 
-[`vaadin-testbench/standalone-firefox-debug` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/StandaloneFirefoxDebug/Dockerfile)
+[`urosporo/testbench-standalone-firefox-debug` Dockerfile](https://github.com/urosporo/docker-vaadin-testbench/blob/master/StandaloneFirefoxDebug/Dockerfile)
 
 ## How to use this image
 
 
 ```
-$ docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm vaadin-testbench/standalone-firefox-debug
+$ docker run -d -p 4444:4444 -p 5900:5900 -v /dev/shm:/dev/shm urosporo/testbench-standalone-firefox-debug
 ```
 
 You can acquire the port that the VNC server is exposed to by running:
